@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color: white;
+            height: 200px;
+            width: 200px;
+            font-size: 30px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        Interaja...
+    </div>
+    <script>
+        var c = document.getElementById('container')
+        c.addEventListener('click' , clicar)
+        c.addEventListener('mouseenter' , entrar)
+        c.addEventListener('mouseout' , sair)
+        function clicar() {
+            c.innerText = 'clicou'
+            c.style.background = 'red'
+        }
+        function entrar(){
+            c.innerText = 'Entrou'
+        }
+        function sair(){
+            c.innerText = 'Saiu'
+            c.style.background = 'black'
+        }
+    </script>
+</body>
+</html>

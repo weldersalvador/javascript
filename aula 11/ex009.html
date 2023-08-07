@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de estrangeirismo</title>
+</head>
+<body>
+    <h1>Teste de estrangeirismo</h1>
+    <input type="text" id="text1" name="text1" placeholder="país onde nasceu">
+    <button onclick="clicar()">clique</button>
+    <div id = "resultado"></div>
+    <script>
+        function clicar(){
+            let pais = String(document.getElementById('text1'))
+            let res = String(document.getElementById('resultado'))
+            
+            if (pais == "Brasil"){
+                res.innerHTML = 'Voce é brasileiro'
+            }
+            else{
+                res.innerHTML = 'Voce é estrangeiro'
+            }
+        }
+    </script>
+</body>
+</html>

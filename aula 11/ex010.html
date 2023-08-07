@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de multa</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <p>Coloque a sua velocidade abaixo:</p>
+    <input type="number" id="velocidade">
+    <button onclick="clicado()">Resultado</button>
+    <div id="resultado"></div>
+    <script>
+        function clicado(){
+            var vel = document.getElementById('velocidade')
+            var res = document.getElementById('resultado')
+            n = Number(vel.value)
+            res.innerHTML = `Sua velocidade é de ${n}Km/h`
+            if (n > 60){
+                res.innerHTML = '<p>Você foi <strong>MULTADO</strong></p>'
+            }
+            else{
+                res.innerHTML = 'Boa velocidade, continue assim'
+                res.innerHTML += '<p> Use sempre cinto de segurança </p>'
+            }
+            
+        }
+    </script>
+</body>
+</html>

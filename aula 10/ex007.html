@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando valores</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        p{
+            display: inline;
+            font-size: 20px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            height: 300px;
+            background-color: grey;
+            align-items: center;
+        }
+        input{
+            width: 200px;
+            height: 30px;
+            margin-bottom: 20px;
+        }
+        #valor{
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Somando valores</h1>
+        <input type="number" id="number1" name="number1" placeholder="Digite um número..."> <p> + </p>
+        <input type="number" id="number2" name="number2" placeholder="Digite um número...">
+        <button onclick="clicar()">Somar</button>
+        <div id="valor"></div>
+    </div>
+    <script>
+        function clicar(){
+            var tx1 = document.getElementById('number1')
+            var tx2 = document.getElementById('number2')
+            var res = document.getElementById('valor')
+            var n1 = Number(tx1.value)
+            var n2 = Number(tx2.value)
+            var soma = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} vale ${soma}`
+        }
+    </script>
+</body>
+</html>
