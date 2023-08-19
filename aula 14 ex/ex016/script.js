@@ -7,6 +7,17 @@ function contar(){
         res.innerHTML = 'Impossivel contar!'
     }else if(passo.value == 0){
         alert('PASSO INVALIDO! CONSIDERANDO PASSO 1')
+        let i = Number(inicio.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
+        if (i < f){
+            for(let c = i; c <= f; c += 1)
+            res.innerHTML += ` ${c}`
+        }else{
+            for(let c = i; c>= f; c -= 1)
+            res.innerHTML += ` ${c}`
+        }
+        
 
     }else{
         let i = Number(inicio.value)
@@ -17,6 +28,7 @@ function contar(){
             res.innerHTML += ` ${c} `
         }else{
             for (let c = i; c >= f; c -= p)
+    
             res.innerHTML += ` ${c}`
         }
         
